@@ -1,10 +1,7 @@
 #!/system/bin/sh
 
-# Copyright (C) 2011 Twisted Playground
+# Copyright (C) 2011 The Android Open Source Project
 
-# ScriptFusion - Twisted Playground System Toolkit
-# http://code.google.com/p/cupcake-frosting/
-#
 # ScriptFusion is built and updated by TwistedUmbrella
 # All code and releases completed on the HTC Thunderbolt
 # Original speedtweak voltage profiles credit imoseyon
@@ -255,54 +252,9 @@ line=================================================
 
 # ASCII Logo Functions
 
-theorysplash() {
-
-echo '   _____ _     _____                  '
-echo '. /__   \ |__ |___ /  ___  _ __ _   _ '
-echo '    / /\/  _ \  |_ \ / _ \|  __| | | |'
-echo '   / /  | | | |___) | (_) | |  | |_| |'
-echo '   \/   |_| |_|____/ \___/|_|   \__, |'
-echo '                                |___/ '
-echo '  ____  __  __  ___  ____  _____  _  _ '
-echo ' ( ___)(  )(  )/ __)(_  _)(  _  )( \( )'
-echo '  )__)  )(__)( \__ \ _)(_  )(_)(  )  ( '
-echo ' (__)  (______)(___/(____)(_____)(_)\_)'
-echo
-echo " Th3ory detected! Gained God complex..."
-
-}
-
-bamfsplash() {
-
-echo ' (                                  *     (     '
-echo ' )\ )                (     (      (  `    )\ )  '
-echo '(()/(      )       ( )\    )\     )\))(  (()/(  '
-echo ' /(_))  ( /(  (    )((_)((((_)(  ((_)()\  /(_)) '
-echo '(_))_   )(_)) )\  ((_)_  )\ _ )\ (_()((_)(_))_| '
-echo ' |   \ ((_)_ ((_)  | _ ) (_)_\(_)|  \/  || |_   '
-echo ' | |) |/ _` |(_-<  | _ \  / _ \  | |\/| || __|   '
-echo ' |___/ \__,_|/__/  |___/ /_/ \_\ |_|  |_||_|    '
-echo '    ____  __  __  ___  ____  _____  _  _ '
-echo '   ( ___)(  )(  )/ __)(_  _)(  _  )( \( )'
-echo '    )__)  )(__)( \__ \ _)(_  )(_)(  )  ( '
-echo '   (__)  (______)(___/(____)(_____)(_)\_)'
-echo
-echo "   BAMF user detected! Meltdown imminent"
-
-}
-
 androidsplash() {
 
-echo '                   _   _             ...      '
-echo '      ___          \\-//`       o,*,(o o)     '
-echo '     (o o)         (o o)       8(o o)(_)Ooo   '
-echo ' ooO--(_)--Ooo-ooO--(_)--Ooo-ooO-(_)---Ooo'
-echo '    ____  __  __  ___  ____  _____  _  _ '
-echo '   ( ___)(  )(  )/ __)(_  _)(  _  )( \( )'
-echo '    )__)  )(__)( \__ \ _)(_  )(_)(  )  ( '
-echo '   (__)  (______)(___/(____)(_____)(_)\_)'
-echo
-echo " Android user detected! Inverting reality..."
+echo 'CyanogenMod 9 for the HTC ThunderBolt'
 
 }
 
@@ -315,15 +267,6 @@ updateprocess() {
 export filefresh=`busybox stat -c %Y /system/customize/speedtweak.sh`
 busybox clear
 echo
-checkbamf=`busybox grep -oFe "DasBAMF" /system/build.prop`
-checktheory=`busybox grep -oFe "TH3ORY" /system/build.prop`
-if [ $checktheory ]
-then
-theorysplash
-elif [ $checkbamf ]
-then
-bamfsplash
-else
 androidsplash
 fi
 echo
